@@ -1,7 +1,7 @@
 const List = require('../models/List')
 
 module.exports = {
-    getlists: async (req,res)=>{
+    getLists: async (req,res)=>{
         console.log(req.user)
         try{
             const listItems = await list.find({userId:req.user.id})
@@ -11,7 +11,7 @@ module.exports = {
             console.log(err)
         }
     },
-    createlist: async (req, res)=>{
+    createList: async (req, res)=>{
         try{
             await list.create({list: req.body.listItem, completed: false, userId: req.user.id})
             console.log('list has been added!')
@@ -32,7 +32,7 @@ module.exports = {
         }
     },
  
-    deletelist: async (req, res)=>{
+    deleteList: async (req, res)=>{
         console.log(req.body.listIdFromJSFile)
         try{
             await list.findOneAndDelete({_id:req.body.listIdFromJSFile})
