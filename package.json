@@ -1,7 +1,7 @@
 {
   "name": "todo-mvc-auth-local",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Simple ToDo App is built using the MVC Architecture, we have also implemented \"authorization\" so folx can sign up, customize & personalize the app",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
@@ -26,5 +26,13 @@
   },
   "devDependencies": {
     "dotenv": "^16.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perfectfreedom/Activities-App.git"
+  },
+  "bugs": {
+    "url": "https://github.com/perfectfreedom/Activities-App/issues"
+  },
+  "homepage": "https://github.com/perfectfreedom/Activities-App#readme"
 }
