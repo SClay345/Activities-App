@@ -55,15 +55,15 @@ a{
     text-decoration: none;
 }
 
-button{
+button, input[type=submit]{
     background-color: var(--color-set);
     border-radius: 10px;
     width:100px;
-    height:35px;
+    height:45px;
     border: none;
 }
 
-button:hover{
+button:hover, input[type=submit]:hover{
     background-color: var(--hover-color);
 }
 
@@ -71,20 +71,20 @@ button:hover{
     color: var(--white);
     text-align:center;
     line-height:1.1em;
-    font-size:1.1em;
+    font-size:var(--font-size);
     font-weight: 400;
     cursor: pointer;
 
 }
 
-.login {
-    /* margin: 5px; */
-}
-
-.signup{
+.form input {
+    outline: 0;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
    
-    /* margin-top: 5px;
-    margin-bottom: 5px;   */
 }
 .completed{
     text-decoration: line-through;
