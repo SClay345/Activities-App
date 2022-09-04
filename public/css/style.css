@@ -27,7 +27,7 @@
 
 body{
     background-color: var(--bg-body);
-    font-size: var(--font-size);
+    font-size: 1.25rem;
     font-family: 'Abril Fatface', sans-serif;
     background-image: url("../images/bg-img.jpg");
     background-repeat: no-repeat;
@@ -50,6 +50,11 @@ body{
     box-shadow: 0 15px 25px rgba(0,0,0,.5);
     transition: .5s;
    
+}
+
+h1{
+    padding: 10px;
+    margin: 10px;
 }
 a{
     text-decoration: none;
