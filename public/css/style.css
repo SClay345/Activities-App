@@ -1,5 +1,90 @@
-h1{
-    color: red;
+:root {
+    --cell-size: 100px;
+   
+    --color: #a3b181; 
+    --color-set: #3a5a40;
+    --hover-color: #8fb996;
+
+  
+    --font-size: 1rem;
+    --font-size-lg: 2rem;
+    --font-size-xl: 3rem;
+     --white: #fff;
+    --green: #588157;
+    --red: #e91e63;
+    --black: #000;
+    --bg-body: #dad7cd;
+     --filled-color: #111d13;
+    --filled-bg: #dad7cd;
+  }
+  
+  .dark {
+    --bg-main: #2a2a28;
+    --bg-body: #1a1a2e;
+    --filled-color: #4f4f63;
+    --filled-bg: #6b6b6b;
+  }
+
+body{
+    background-color: var(--bg-body);
+    font-size: var(--font-size);
+    font-family: 'Abril Fatface', sans-serif;
+    background-image: url("../images/bg-img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+    background-color: var(--filled-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+    transition: .5s;
+   
+}
+a{
+    text-decoration: none;
+}
+
+button{
+    background-color: var(--color-set);
+    border-radius: 10px;
+    width:100px;
+    height:35px;
+    border: none;
+}
+
+button:hover{
+    background-color: var(--hover-color);
+}
+
+.btn{
+    color: var(--white);
+    text-align:center;
+    line-height:1.1em;
+    font-size:1.1em;
+    font-weight: 400;
+    cursor: pointer;
+
+}
+
+.login {
+    /* margin: 5px; */
+}
+
+.signup{
+   
+    /* margin-top: 5px;
+    margin-bottom: 5px;   */
 }
 .completed{
     text-decoration: line-through;
