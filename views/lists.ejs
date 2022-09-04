@@ -10,7 +10,7 @@
 <body>
     <% lists.forEach( el => { %>
         <li class='todoItem' data-id='<%=el._id%>'>
-            <span class=><%= el.lists %></span>
+            <span class=><%= el.name %></span>
             <span class='del'> Delete </span>
         </li>
     <% }) %>   
