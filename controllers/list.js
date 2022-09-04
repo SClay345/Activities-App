@@ -4,9 +4,6 @@ module.exports = {
     getLists: async (req,res)=>{
         console.log(req.user)
         try{
-            // const listItems = await list.find({userId:req.user.id})
-            // const itemsLeft = await list.countDocuments({userId:req.user.id,completed: false})
-            // res.render('lists.ejs', {lists: listItems, left: itemsLeft, user: req.user})
             const listItems = await List.find({userId:req.user.id})
             res.render('lists.ejs', {lists: listItems})
         }catch(err){
@@ -15,7 +12,6 @@ module.exports = {
     },
     createList: async (req, res)=>{
         try{
-            // await list.create({list: req.body.listItem, completed: false, userId: req.user.id})
             await List.create({name: req.body.listItem, userId: req.user.id})
             console.log('list has been added!')
             res.redirect('/lists')
