@@ -58,6 +58,7 @@ h1{
 }
 a{
     text-decoration: none;
+    color: var(--white);
 }
 
 button, input[type=submit]{
@@ -91,6 +92,30 @@ button:hover, input[type=submit]:hover{
     box-sizing: border-box;
    
 }
+.list{
+    width:410px;
+    margin:0 auto;
+    cursor: pointer;
+    }
+    
+    .list li{
+    counter-reset: li;
+    list-style: none;
+    *list-style: decimal;
+    font-size: 15px;
+    padding: 5px;
+    margin-bottom: 2em;
+    }
+
+    .list {
+    display: flex;
+    background: var(--filled-color);
+    color: white;
+    text-decoration: none;
+    -webkit-transition: box-shadow 1s; 
+    transition: box-shadow 1s;
+    }
+    
 .completed{
     text-decoration: line-through;
     color: gray;
