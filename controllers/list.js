@@ -1,19 +1,18 @@
 const List = require('../models/List')
 
 module.exports = {
-    getlists: async (req,res)=>{
+    getLists: async (req,res)=>{
         console.log(req.user)
         try{
-            const listItems = await list.find({userId:req.user.id})
-            const itemsLeft = await list.countDocuments({userId:req.user.id,completed: false})
-            res.render('lists.ejs', {lists: listItems, left: itemsLeft, user: req.user})
+            const listItems = await List.find({userId:req.user.id})
+            res.render('lists.ejs', {lists: listItems})
         }catch(err){
             console.log(err)
         }
     },
-    createlist: async (req, res)=>{
+    createList: async (req, res)=>{
         try{
-            await list.create({list: req.body.listItem, completed: false, userId: req.user.id})
+            await List.create({name: req.body.listItem, userId: req.user.id})
             console.log('list has been added!')
             res.redirect('/lists')
         }catch(err){
@@ -22,9 +21,8 @@ module.exports = {
     },
     editName: async (req, res)=>{
         try{
-            await list.findOneAndUpdate({_id:req.body.listIdFromJSFile},{
-                name: req.body.name,
-                new: true,
+            await List.findOneAndUpdate({_id:req.body.listIdFromJSFile},{
+                name: req.body.name
             })
             console.log('List Re-named')
             res.json('List Re-named')
@@ -33,10 +31,10 @@ module.exports = {
         }
     },
  
-    deletelist: async (req, res)=>{
+    deleteList: async (req, res)=>{
         console.log(req.body.listIdFromJSFile)
         try{
-            await list.findOneAndDelete({_id:req.body.listIdFromJSFile})
+            await List.findOneAndDelete({_id:req.body.listIdFromJSFile})
             console.log('Deleted list')
             res.json('Deleted It')
         }catch(err){
