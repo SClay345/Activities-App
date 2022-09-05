@@ -23,7 +23,8 @@ module.exports = {
     editName: async (req, res)=>{
         try{
             await list.findOneAndUpdate({_id:req.body.listIdFromJSFile},{
-                name: req.body.name
+                name: req.body.name,
+                new: true,
             })
             console.log('List Re-named')
             res.json('List Re-named')
